@@ -37,10 +37,10 @@ def replace_string(filename):
                     inline[i].text = text
             print (p.text)
 
-    docx_path = "/Users/dhruv/Documents/NYU CoverLetter/Companies/docx/CoverLetter_" + name + ".docx"
+    docx_path = "./docx/CoverLetter_" + name + ".docx"
     doc.save(docx_path)
 
-    pdf_path = "/Users/dhruv/Documents/NYU CoverLetter/Companies/PDF/CoverLetter_" + name + ".pdf"
+    pdf_path = "./PDF/CoverLetter_" + name + ".pdf"
     convert(docx_path, pdf_path)
 
 try:
@@ -59,6 +59,6 @@ today = date.today()
 date = today.strftime("%B %d, %Y")
 print(company, state, date, "\n**\n")
 
-replace_string("/Users/dhruv/Documents/NYU CoverLetter/coverletterdraft.docx")
+replace_string("./coverletterdraft.docx")
 
 
